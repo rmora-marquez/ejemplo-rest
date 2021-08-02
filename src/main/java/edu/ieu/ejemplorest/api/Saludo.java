@@ -1,5 +1,9 @@
 package edu.ieu.ejemplorest.api;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Saludo {
 	private String nombre;
 	private String texto;
@@ -14,6 +18,7 @@ public class Saludo {
 		this.texto = texto;
 	}
 
+	@XmlElement
 	public String getNombre() {
 		return nombre;
 	}
@@ -22,6 +27,7 @@ public class Saludo {
 		this.nombre = nombre;
 	}
 
+	@XmlElement
 	public String getTexto() {
 		return texto;
 	}

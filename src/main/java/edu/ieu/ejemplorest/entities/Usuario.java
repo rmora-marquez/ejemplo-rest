@@ -1,6 +1,8 @@
 package edu.ieu.ejemplorest.entities;
 
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Usuario {
 	private int id;
 	private String email;
