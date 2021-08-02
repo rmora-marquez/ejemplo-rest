@@ -1,6 +1,6 @@
 package edu.ieu.ejemplorest.servicios;
 
-import java.beans.Transient;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
@@ -15,12 +15,16 @@ public class UsuarioServiceImp implements UsuarioService{
     private static List<Usuario> users;
 	
     static{
-        users= populateDummyUsers();
+        users = populateDummyUsers();
     }
     
 	private static List<Usuario> populateDummyUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Usuario> users = new ArrayList<Usuario>();
+        users.add(new Usuario( (int)counter.incrementAndGet(),"sam@email.com","sam", "Sam", "Simpson"));
+        users.add(new Usuario( (int)counter.incrementAndGet(),"tom@email.com", "tom", "Tom", "Smith"));
+        users.add(new Usuario( (int)counter.incrementAndGet(),"jrome@email.com","jor", "Jerome", "Blatzi"));
+        users.add(new Usuario( (int)counter.incrementAndGet(),"silvia@email","sil", "Silvia", "Romero"));
+        return users;
 	}
     
 	@Override
