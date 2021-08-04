@@ -56,6 +56,7 @@ public class UsuarioApiRest {
 		service.saveUser(user);
 		 return new ResponseEntity<Void>(HttpStatus.CREATED);
 	}
+	
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<Usuario> updateUser(@PathVariable("id") int id,
 			@RequestBody Usuario usuario){
